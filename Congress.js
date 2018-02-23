@@ -57,43 +57,45 @@
 		}
     $.getJSON(apiCall, function(resp) {
 		
-		if(table.tableInfo.id=="Member"){
-          var feat = resp.results[0].members, featChamber=resp.results[0].chamber,
-          tableData = [];
-	  	  var singleDistricts = ["MT","ND","SD","WY","AK","VT","DE"];
+		if(table.tableInfo.id=="Member")
+		{
+                     var feat = resp.results[0].members;
+	             var featChamber=resp.results[0].chamber;
+	             var tableData = [];
+	             var singleDistricts = ["MT","ND","SD","WY","AK","VT","DE"];
             
-          // Iterate over the JSON object
-          for (var i = 0 ; i < feat.length; i++) {
-             //Check to see if its a state with a single District
-             for(var j=0; j<singleDistricts.length;j++){		 
-                if(feat[i].state==singleDistricts[j])
-   		        {
-	  	         feat[i].district="0";
-		        }			 
+                     // Iterate over the JSON object
+                     for (var i = 0 ; i < feat.length; i++) {
+                      //Check to see if its a state with a single District
+                      for(var j=0; j<singleDistricts.length;j++)
+		      {		 
+                          if(feat[i].state==singleDistricts[j])
+   		          {
+	  	            feat[i].district="0";
+		          }			 
 		      }
 		  
-		      tableData.push({
-		         
-		         "id":feat[i].id,	  
-                 "chamber": featChamber,
-		         "state": feat[i].state,
-		         "district": feat[i].district,
-				 "first_name": feat[i].first_name,
-				 "last_name": feat[i].last_name,
-				 "party": feat[i].party
-                });
-			 
-           }
+		       tableData.push({ 
+		       "id":feat[i].id,	  
+                       "chamber": featChamber,
+		       "state": feat[i].state,
+		       "district": feat[i].district,
+		       "first_name": feat[i].first_name,
+		       "last_name": feat[i].last_name,
+		       "party": feat[i].party
+                       });
+		      }
 		}
 		else if(table.tableInfo.id=="Vote")
 		{
-			var myVote = resp.results.votes.vote, myPositions=resp.results.votes.vote.positions,
-            tableData = [];
+			var myVote = resp.results.votes.vote;
+			var myPositions=resp.results.votes.vote.positions;
+                        var tableData = [];
 			
 			for (var k = 0 ; k < myPositions.length; k++) {
 			tableData.push({
 			 	 "id":myPositions[k].member_id,	
-		         "congress":myVote.congress,
+		                 "congress":myVote.congress,
 				 "session":myVote.session,	
                  "chamber": myVote.chamber,
 		         "roll_call": myVote.roll_call,
