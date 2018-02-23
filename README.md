@@ -1,8 +1,4 @@
-Hi there! Welcome to AWS Cloud9!
+Here is an attempt to use a web data connector to conect to congress voting record
 
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
-
-Happy coding!
 
 *Here is the Bee hive [bzzz](https://theowlseye.github.io/Congress/CongressWDC.html)
