@@ -93,7 +93,7 @@
 			var myPositions=resp.results.votes.vote.positions;
                         var tableData = [];
 			
-			for (var k = 0 ; k < myPositions.length; k++) {
+			for (var k = 0 ; k < 5; k++) {
 			tableData.push({
 			 	 "id":myPositions[k].member_id,	
 		                 "congress":"congress",
