@@ -99,7 +99,7 @@
 				 "session":myVote.session,	
                  "chamber": myVote.chamber,
 		         "roll_call": myVote.roll_call,
-		         "description": myVote.description,
+		         "description":"Who knows",
 				 "member_id": myPositions[k].member_id,
 				 "vote_position": myPositions[k].vote_position
                 });
