@@ -88,17 +88,18 @@
 		}
 		else if(table.tableInfo.id=="Vote")
 		{
-			var myVote = resp.results[0].votes[0].vote[0];
+			var myVotes = resp.results[0].votes;
+			
 			var myPositions=resp.results[0].votes[0].vote[0].positions;
                         var tableData = [];
 			
 			for (var k = 0 ; k < myPositions.length; k++) {
 			tableData.push({
 			 	 "id":myPositions[k].member_id,	
-		                 "congress":myVote.congress,
-				 "session":myVote.session,	
-                 "chamber": myVote.chamber,
-		         "roll_call": myVote.roll_call,
+		                 "congress":"congress",
+				 "session":"2",	
+                 "chamber": "house",
+		         "roll_call": "34",
 		         "description":"Who knows",
 				 "member_id": myPositions[k].member_id,
 				 "vote_position": myPositions[k].vote_position
