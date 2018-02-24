@@ -90,7 +90,7 @@
 		{
 			var myVotes = resp.results.votes;
 			
-			var myPositions=resp.results[0].votes[0].vote[0].positions;
+			var myPositions=resp.results.votes.vote.positions;
                         var tableData = [];
 			
 			for (var k = 0 ; k < myPositions.length; k++) {
