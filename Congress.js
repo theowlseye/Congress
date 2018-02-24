@@ -88,7 +88,7 @@
 		}
 		else if(table.tableInfo.id=="Vote")
 		{
-			var myVotes = resp.results[0].votes;
+			var myVotes = resp.results.votes;
 			
 			var myPositions=resp.results[0].votes[0].vote[0].positions;
                         var tableData = [];
