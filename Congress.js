@@ -88,9 +88,9 @@
 		}
 		else if(table.tableInfo.id=="Vote")
 		{
-			//var myVotes = resp.results.votes;
+			var myVotes = resp.results[0];
 			
-			var myPositions=resp.results.votes.vote.positions;
+			//var myPositions=resp.results.votes.vote.positions;
                         var tableData = [];
 			
 			for (var k = 0 ; k < 5; k++) {
