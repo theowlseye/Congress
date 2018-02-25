@@ -88,7 +88,7 @@
 		}
 		else if(table.tableInfo.id=="Vote")
 		{
-			var myVote = resp.results.votes.vote;
+			var myVote = resp.results;
 			
 			//var myPositions=resp.results[0].positions;
                         var tableData = [];
@@ -98,7 +98,7 @@
 			 	 "id":"3" ,//myPositions[k].member_id,	
 		                 "congress":"congress",
 				 "session":"2",	
-                 "chamber": myVote.chamber,
+                 "chamber": myVote.length,
 		         "roll_call": "34",
 		         "description":"Who knows",
 				 "member_id": "3" ,//myPositions[k].member_id,
