@@ -52,7 +52,9 @@
 			//American Health care act
 			//apiCall="https://api.propublica.org/congress/v1/115/house/sessions/1/votes/256.json";
 			//TARP
-			apiCall="https://api.propublica.org/congress/v1/110/house/sessions/2/votes/680.json";
+			//apiCall="https://api.propublica.org/congress/v1/110/house/sessions/2/votes/680.json";
+			//test
+			apiCall="https://api.propublica.org/congress/v1/115/senate/sessions/1/votes/17.json";
 			
 		}
     $.getJSON(apiCall, function(resp) {
