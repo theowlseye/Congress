@@ -95,13 +95,13 @@
 			
 			for (var k = 0 ; k < 5; k++) {
 			tableData.push({
-			 	 "id":"3" //myPositions[k].member_id,	
+			 	 "id":"3" ,//myPositions[k].member_id,	
 		                 "congress":"congress",
 				 "session":"2",	
                  "chamber": "house",
 		         "roll_call": "34",
 		         "description":"Who knows",
-				 "member_id": "3" //myPositions[k].member_id,
+				 "member_id": "3" ,//myPositions[k].member_id,
 				 "vote_position": "3" //myPositions[k].vote_position
                 });
 			}
