@@ -92,19 +92,19 @@
 		{
 			var myVote = resp.results.votes.vote;
 			
-			//var myPositions=resp.results[0].positions;
+			var myPositions= resp.results.votes.vote.positions;
                         var tableData = [];
 			
-			for (var k = 0 ; k < 5; k++) {
+			for (var k = 0 ; k < myPositions.length ; k++) {
 			tableData.push({
-			 	 "id":"3" ,//myPositions[k].member_id,	
+			 	 "id":myPositions[k].member_id,	
 		                 "congress":"congress",
 				 "session":"2",	
-                 "chamber": "chamber",
+                 "chamber": myVote.chamber,
 		         "roll_call": "34",
 		         "description":"Who knows",
-				 "member_id": "3" ,//myPositions[k].member_id,
-				 "vote_position": "3" //myPositions[k].vote_position
+				 "member_id": myPositions[k].member_id,
+				 "vote_position": myPositions[k].vote_position
                 });
 			}
 		}
