@@ -88,21 +88,21 @@
 		}
 		else if(table.tableInfo.id=="Vote")
 		{
-			//var myVotes = resp.results[0];
+			var myVotes = resp.results;
 			
-			var myPositions=resp.results[0].positions;
+			//var myPositions=resp.results[0].positions;
                         var tableData = [];
 			
 			for (var k = 0 ; k < 5; k++) {
 			tableData.push({
-			 	 "id":myPositions[k].member_id,	
+			 	 "id":"3" //myPositions[k].member_id,	
 		                 "congress":"congress",
 				 "session":"2",	
                  "chamber": "house",
 		         "roll_call": "34",
 		         "description":"Who knows",
-				 "member_id": myPositions[k].member_id,
-				 "vote_position": myPositions[k].vote_position
+				 "member_id": "3" //myPositions[k].member_id,
+				 "vote_position": "3" //myPositions[k].vote_position
                 });
 			}
 		}
